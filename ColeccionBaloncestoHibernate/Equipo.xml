@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Equipos>
+    <Equipo>
+        <idEquipo>1</idEquipo>
+        <nombre>Toros de Madrid</nombre>
+        <localidad>Madrid</localidad>
+        <pais>España</pais>
+        <nombreCorto>Toros</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>2</idEquipo>
+        <nombre>Águilas de Barcelona</nombre>
+        <localidad>Barcelona</localidad>
+        <pais>España</pais>
+        <nombreCorto>Águilas</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>3</idEquipo>
+        <nombre>Tiburones de Valencia</nombre>
+        <localidad>Valencia</localidad>
+        <pais>España</pais>
+        <nombreCorto>Tiburones</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>4</idEquipo>
+        <nombre>Leones de Sevilla</nombre>
+        <localidad>Sevilla</localidad>
+        <pais>España</pais>
+        <nombreCorto>Leones</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>5</idEquipo>
+        <nombre>Halcones de Bilbao</nombre>
+        <localidad>Bilbao</localidad>
+        <pais>España</pais>
+        <nombreCorto>Halcones</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>6</idEquipo>
+        <nombre>Caimanes de Zaragoza</nombre>
+        <localidad>Zaragoza</localidad>
+        <pais>España</pais>
+        <nombreCorto>Caimanes</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>7</idEquipo>
+        <nombre>Panteras de Palencia</nombre>
+        <localidad>Palencia</localidad>
+        <pais>España</pais>
+        <nombreCorto>Panteras</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>8</idEquipo>
+        <nombre>Jaguares de Palencia</nombre>
+        <localidad>Palencia</localidad>
+        <pais>España</pais>
+        <nombreCorto>Jaguares</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>9</idEquipo>
+        <nombre>Pumas de Murcia</nombre>
+        <localidad>Murcia</localidad>
+        <pais>España</pais>
+        <nombreCorto>Pumas</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>10</idEquipo>
+        <nombre>Búhos de Valladolid</nombre>
+        <localidad>Valladolid</localidad>
+        <pais>España</pais>
+        <nombreCorto>Búhos</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>11</idEquipo>
+        <nombre>Las llamas azules</nombre>
+        <localidad>Valladolid</localidad>
+        <pais>España</pais>
+        <nombreCorto>llamas</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>12</idEquipo>
+        <nombre>Los Malageños</nombre>
+        <localidad>Málaga</localidad>
+        <pais>España</pais>
+        <nombreCorto>Malageños</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>13</idEquipo>
+        <nombre>Los Guacamallos de Perú</nombre>
+        <localidad>Localidad2</localidad>
+        <pais>Perú</pais>
+        <nombreCorto>Los Guaca</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>14</idEquipo>
+        <nombre>Los llarrara</nombre>
+        <localidad>Acapulco</localidad>
+        <pais>México</pais>
+        <nombreCorto>Los llara</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>15</idEquipo>
+        <nombre>sx</nombre>
+        <localidad>sacas</localidad>
+        <pais>cas</pais>
+        <nombreCorto>as</nombreCorto>
+    </Equipo>
+</Equipos>

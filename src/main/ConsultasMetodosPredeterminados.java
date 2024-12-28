@@ -546,7 +546,6 @@ public class ConsultasMetodosPredeterminados {
 	 * @see HibernateUtil
 	 * @since 2024
 	 */
-
 	private void insertarJugadoresEnNuevoEquipo(Equipo equipoNuevo) {
 		
 		Scanner sc = new Scanner(System.in);
@@ -610,10 +609,13 @@ public class ConsultasMetodosPredeterminados {
 	                                    j.setEquipo(equipoNuevo); // Asignar el equipo
 	                                    s.saveOrUpdate(j); // Actualizar en la base de datos
 	                                    System.out.println("Jugador con id:"+j.getIdJugador()+" insertado correctamente.");
+	                                    
+	                                }else {
+	                                	System.out.println("Jugador con ID: "+iD+" no existe.");
 	                                }
 	                            }
-	                            
-	                            break;
+	                            respuesta="No";//Para salir del bucle principal
+	                            break; // Para salir del bucle actual
 		    				}
 	                    }while (!respuestaSegunda.equalsIgnoreCase("No"));
 	             
@@ -1162,12 +1164,22 @@ public class ConsultasMetodosPredeterminados {
 	                System.out.println("Finalmente vamos a insertar estadísticas para los jugadores del equipo visitante '"+equipoVisitante.getNombre()+"'(ID: "+equipoVisitante.getIdEquipo()+"): ");
 	                listaDeDatosJugadoresAInsertarVisitante=insertarEstadisticasParaEquipo(equipoVisitante,partidoNuevo, sc);
 	                
-	                for(Datosjugadorpartido datosJugadorEnPartidosLocales : listaDeDatosJugadoresAInsertarLocal) {
-	                	s.save(datosJugadorEnPartidosLocales);
+	                if (listaDeDatosJugadoresAInsertarLocal.size()>0) {
+	                	for(Datosjugadorpartido datosJugadorEnPartidosLocales : listaDeDatosJugadoresAInsertarLocal) {
+		                	s.save(datosJugadorEnPartidosLocales);
+		                }
+	                }else {
+	                	System.out.println("El equipo local no posee jugadores.");
 	                }
-	                for(Datosjugadorpartido datosJugadorEnPartidosVisitantes : listaDeDatosJugadoresAInsertarVisitante) {
-	                	s.save(datosJugadorEnPartidosVisitantes);
+	                
+	                if(listaDeDatosJugadoresAInsertarVisitante.size()>0) {
+	                	for(Datosjugadorpartido datosJugadorEnPartidosVisitantes : listaDeDatosJugadoresAInsertarVisitante) {
+		                	s.save(datosJugadorEnPartidosVisitantes);
+		                }
+	                }else {
+	                	System.out.println("El equipo visitante no posee jugadores.");
 	                }
+	                
 	                System.out.println("Estadísticas guardadas satisfactoriamente.");
 	                break;
 				}
@@ -1319,7 +1331,7 @@ public class ConsultasMetodosPredeterminados {
      * @throws InputMismatchException Si el usuario ingresa un valor no válido.
      * @since 2024
      */
-	private int leerValorEntero(String mensaje, Scanner sc) {
+	public int leerValorEntero(String mensaje, Scanner sc) {
 	    int valor = -1;
 	    while (valor < 0) {
 	        System.out.println(mensaje);

@@ -10,7 +10,7 @@ import java.util.Scanner;
  * de una liga de baloncesto, utilizando Hibernate para la persistencia de datos.
  * </p>
  * <p>
- * Cabe destacar que la clase cuenta con dos atributos, 'ConsultasMetodosPredeterminados' y 'ConsultasHQL'.
+ * Cabe destacar que la clase cuenta con tres atributos, 'ConsultasMetodosPredeterminados', 'ConsultasHQL' y 'ConsultasXML' .
  * Utilizando los mismos para implementar el patrón DAO (Data Access Object), separando así la lógica de consultas y 
  * transacciones del flujo principal del programa, siguiendo principios de diseño modular.
  * </p>
@@ -20,7 +20,6 @@ import java.util.Scanner;
  * XPath y XQuery.
  * </p>
  * @author Christian Alejandro Quinone
- * @throws InputMismatchException Si el usuario proporciona un valor no válido para la opción o cualquier entrada requerida durante el proceso.
  * @version 1.0
  * @since 2024
  */
@@ -28,7 +27,24 @@ public class Practica_2ev {
 	
 	private static final ConsultasMetodosPredeterminados consultasPredeterminadas = new ConsultasMetodosPredeterminados();
 	private static final ConsultasHQL consultasHQL = new ConsultasHQL();
-
+	private static final ConsultasXML consultasXML = new ConsultasXML();
+	
+    /**
+     * Método principal de la aplicación.
+     * <p>
+     * Presenta un menú interactivo que permite al usuario realizar operaciones de gestión y consulta en la base de datos.
+     * Las opciones disponibles son:
+     * <ul>
+     *   <li><b>Opción 1:</b> Gestión mediante métodos predeterminados de Hibernate.</li>
+     *   <li><b>Opción 2:</b> Consultas utilizando el lenguaje HQL.</li>
+     *   <li><b>Opción 3:</b> Consultas XML utilizando XPath y XQuery.</li>
+     *   <li><b>Opción 4:</b> Salir del programa.</li>
+     * </ul>
+     * </p>
+     * <p>
+     * @param args Argumentos de línea de comandos (no utilizados en esta aplicación).
+     * @throws InputMismatchException Si el usuario proporciona una entrada no válida durante la selección del menú.
+     */
 	public static void main(String[] args) {
 		
 		int opcion = 0 ;
@@ -48,8 +64,7 @@ public class Practica_2ev {
 					usoConsultasHQL();
 					break;
 				case 3 :
-					//Consultas xPath
-					
+					usoConsultasXML();
 					break;
 				case 4 :
 
@@ -99,7 +114,12 @@ public class Practica_2ev {
 		
 		Scanner sc = new Scanner (System.in);
 		do {
-			System.out.println("Elige entre las siguientes opciones:\n1- Buscar cualquier tipo de registro por su clave primaria.\n2- A partir de un determinado ID de jugador, obtener sus datos y todas sus estadísticas.\n3- A partir del ID de un equipo, obtener sus datos y un listado de todos los jugadores que forman parte de él, ordenados por la altura (de mayor a menor).\n4- Insertar cualquier tipo de registro en la base de datos.\n5- Salir ");
+			System.out.println("Elige entre las siguientes opciones:"
+					+ "\n1- Buscar cualquier tipo de registro por su clave primaria."
+					+ "\n2- A partir de un determinado ID de jugador, obtener sus datos y todas sus estadísticas."
+					+ "\n3- A partir del ID de un equipo, obtener sus datos y un listado de todos los jugadores que forman parte de él, ordenados por la altura (de mayor a menor)."
+					+ "\n4- Insertar cualquier tipo de registro en la base de datos."
+					+ "\n5- Salir ");
 			
 			try {
 				
@@ -329,9 +349,14 @@ public class Practica_2ev {
 		
 		Scanner sc = new Scanner (System.in);
 		do {
-			System.out.println("Elige entre las siguientes opciones:\n1- Imprimir por pantalla las estadísticas de un partido bien tabuladas.\n2- Imprimir por pantalla los datos de todos los jugadores que pertenecen a equipos de la localidad “Palencia”, y para\r\n"
-					+ "   cada jugador su media de estadísticas.\n3- A partir del ID de un equipo, mostrar los datos de los jugadores que han obtenido las tres mejores valoraciones.\n4- A partir del ID de un jugador, se mostrarán todas las estadísticas separadas en dos grupos, las de los partidos en los que fue titular y\r\n"
-					+ "   las de los partidos en los que fue suplente. Además se mostrará la media para cada uno de esos grupos.\n5- A partir del ID de un equipo, mostrar sus estadísticas como local y como visitante (partidos jugados, ganados, perdidos, puntos a favor y puntos en contra).\n6- Mostrar clasificación final de la liga.\n7- Salir.  ");
+			System.out.println("Elige entre las siguientes opciones:"
+					+ "\n1- Imprimir por pantalla las estadísticas de un partido bien tabuladas."
+					+ "\n2- Imprimir por pantalla los datos de todos los jugadores que pertenecen a equipos de la localidad “Palencia”, y para cada jugador su media de estadísticas."
+					+ "\n3- A partir del ID de un equipo, mostrar los datos de los jugadores que han obtenido las tres mejores valoraciones."
+					+ "\n4- A partir del ID de un jugador, se mostrarán todas las estadísticas separadas en dos grupos, las de los partidos en los que fue titular y las de los partidos en los que fue suplente. Además se mostrará la media para cada uno de esos grupos."
+					+ "\n5- A partir del ID de un equipo, mostrar sus estadísticas como local y como visitante (partidos jugados, ganados, perdidos, puntos a favor y puntos en contra)."
+					+ "\n6- Mostrar clasificación final de la liga."
+					+ "\n7- Salir.  ");
 			
 			try {
 				
@@ -383,6 +408,146 @@ public class Practica_2ev {
 		
 	}
 	
+    /**
+     * Maneja el menú de opciones relacionadas con consultas XML utilizando XPath y XQuery.
+     * <p>
+     * Este método permite realizar diversas operaciones sobre una base de datos representada como colección XML,
+     * tales como ejecutar consultas personalizadas, imprimir información detallada de jugadores y partidos, 
+     * y obtener datos específicos basados en criterios predefinidos.
+     * </p>
+     * <p>
+     * Opciones del menú:
+     * <ul>
+     *   <li><b>1:</b> Permite al usuario realizar consultas personalizadas XPath o XQuery.</li>
+     *   <li><b>2:</b> Imprime información detallada de todos los jugadores.</li>
+     *   <li><b>3:</b> Imprime información de todos los partidos jugados por un equipo determinado.</li>
+     *   <li><b>4:</b> Obtiene una lista de jugadores que pertenecen a un equipo específico.</li>
+     *   <li><b>5:</b> Obtiene los datos del jugador con la valoración más alta en la liga.</li>
+     *   <li><b>6:</b> Salir del menú.</li>
+     * </ul>
+     * </p>
+     * <p>
+     * Antes de mostrar el menú, el método verifica si la colección XML necesaria está disponible,
+     * mediante la función <b>posibilidadDeGenerarColeccionXML</b>.
+     * </p>
+     * 
+     * @throws InputMismatchException Si el usuario proporciona una opción no válida.
+     * @see #posibilidadDeGenerarColeccionXML(Scanner)
+     * @see ConsultasXML#consultaXPathXQueryDelUsuario(String, String)
+     * @see ConsultasXML#imprimirJugadores(String)
+     * @see ConsultasXML#imprimirPartidosDeEquipo(String)
+     * @see ConsultasXML#obtenerJugadoresDeEquipo(String)
+     * @see ConsultasXML#obtenerJugadoresConValoracionMasAlta(String)
+     */
+	private static void usoConsultasXML() {
+		
+		int opcion = 0 , id;
+		Scanner sc = new Scanner (System.in);
+		String consulta = "";
+		
+		posibilidadDeGenerarColeccionXML(sc);
+		
+		do {
+			
+			System.out.println("Elige entre las siguientes opciones:"
+					+ "\n1- Hacer consultas XPath y XQuery a la base de datos."
+					+ "\n2- Imprimir por pantalla la información detallada de todos los jugadores."
+					+ "\n3- Imprimir por pantalla la información de todos los partidos jugados por un determinado equipo."
+					+ "\n4- Obtener una lista de jugadores que pertenecen a un equipo."
+					+ "\n5- Obtener los datos del jugador que ha sacado la valoración más alta en toda la liga."
+					+ "\n6- Salir.  ");
+			
+			try {
+				String nombreColeccion = "/ColeccionBaloncestoHibernate";
+				opcion = sc.nextInt();
+				sc.nextLine();
+				switch(opcion) {
+				case 1 :
+					System.out.println("A continuación introduce la consulta a realizar: ");
+					consulta = sc.nextLine();	
+					consultasXML.consultaXPathXQueryDelUsuario(nombreColeccion, consulta);
+					break;
+				case 2 :
+					consultasXML.imprimirJugadores(nombreColeccion);
+					break;
+				case 3 :
+					consultasXML.imprimirPartidosDeEquipo(nombreColeccion);
+					break;
+				case 4 :
+					consultasXML.obtenerJugadoresDeEquipo(nombreColeccion);
+					break;
+				case 5 :
+					consultasXML.obtenerJugadoresConValoracionMasAlta(nombreColeccion);
+					break;
+				case 6 :
+					
+					break;
+					
+				default :
+					System.out.println("Ingresa una opción válida.\n");
+					break;
+				
+				}
+					
+			}catch (InputMismatchException ex) {
+				System.out.println("Ingresa una opción válida.\n");
+				sc.nextLine();
+			}
+			
+		}while (opcion!=6);
+		
+	}
+
+    /**
+     * Gestiona la posibilidad de generar una colección XML para consultas mediante 'eXide'.
+     * <p>
+     * Este método utiliza la clase <b>consultasXML</b> para intentar construir una colección XML a partir de la base de datos.
+     * Dependiendo del resultado de la operación, el usuario es informado sobre la ubicación de la colección
+     * y se le solicita que la añada al entorno de 'eXide' para la gestión de consultas.
+     * </p>
+     * <p>
+     * Comportamiento según el resultado devuelto por <b>consultasXML.consultarABaseYConstruirColeccion()</b>:
+     * <ul>
+     *   <li><b>1:</b> La colección XML fue generada exitosamente. Se solicita al usuario que la añada a 'eXide'.</li>
+     *   <li><b>0:</b> No fue posible actualizar la colección completamente, pero se informa al usuario de su ubicación interna.</li>
+     *   <li><b>2:</b> La colección ya existe en el proyecto y se informa al usuario de su ubicación.</li>
+     * </ul>
+     * </p>
+     * <p>
+     * En todos los casos, se solicita al usuario que escriba 'Listo' para confirmar que la colección ha sido añadida a 'eXide'.
+     * </p>
+     * 
+     * @param sc Un objeto {@code Scanner} utilizado para leer la entrada del usuario.
+     * @see ConsultasXML#consultarABaseYConstruirColeccion()
+     */
+	private static void posibilidadDeGenerarColeccionXML(Scanner sc) {
+		int seGeneraColeccion;
+		String respuesta;
+		seGeneraColeccion = consultasXML.consultarABaseYConstruirColeccion();
+		
+		if (seGeneraColeccion == 1) {
+			System.out.println("Añade la colección a 'eXide' para gestionar las consultas.");
+			do {
+				System.out.println("Cuando la hayas añadido, escribe 'Listo' para continuar.");
+				respuesta = sc.nextLine();
+			}while (!respuesta.equalsIgnoreCase("Listo"));
+		}else if(seGeneraColeccion == 0){
+			System.out.println("No fué posible actualizar la colección XML.");
+			System.out.println("Cuentas con una colección XML en la ruta interna del proyecto:\n  Practica_2ev_AD\\ColeccionBaloncestoHibernate .");
+			System.out.println("Añade la colección a 'eXide' para gestionar las consultas.");
+			do {
+				System.out.println("Cuando la hayas añadido, escribe 'Listo' para continuar.");
+				respuesta = sc.nextLine();
+			}while (!respuesta.equalsIgnoreCase("Listo"));
+		}else if(seGeneraColeccion == 2){
+			System.out.println("Cuentas con una colección XML en la ruta interna del proyecto:\n  Practica_2ev_AD\\ColeccionBaloncestoHibernate .");
+			System.out.println("Añade la colección a 'eXide' para gestionar las consultas.");
+			do {
+				System.out.println("Cuando la hayas añadido, escribe 'Listo' para continuar.");
+				respuesta = sc.nextLine();
+			}while (!respuesta.equalsIgnoreCase("Listo"));
+		}
+	}
 
 	
 
