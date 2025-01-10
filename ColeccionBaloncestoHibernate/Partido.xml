@@ -18,7 +18,7 @@
         <idPartido>3</idPartido>
         <idEquipoLocal>1</idEquipoLocal>
         <idEquipoVisitante>3</idEquipoVisitante>
-        <puntosLocal>65</puntosLocal>
+        <puntosLocal>95</puntosLocal>
         <puntosVisitante>85</puntosVisitante>
     </Partido>
     <Partido>
@@ -26,7 +26,7 @@
         <idEquipoLocal>3</idEquipoLocal>
         <idEquipoVisitante>1</idEquipoVisitante>
         <puntosLocal>81</puntosLocal>
-        <puntosVisitante>50</puntosVisitante>
+        <puntosVisitante>90</puntosVisitante>
     </Partido>
     <Partido>
         <idPartido>5</idPartido>
@@ -629,47 +629,5 @@
         <idEquipoVisitante>9</idEquipoVisitante>
         <puntosLocal>84</puntosLocal>
         <puntosVisitante>89</puntosVisitante>
-    </Partido>
-    <Partido>
-        <idPartido>91</idPartido>
-        <idEquipoLocal>10</idEquipoLocal>
-        <idEquipoVisitante>11</idEquipoVisitante>
-        <puntosLocal>98</puntosLocal>
-        <puntosVisitante>11</puntosVisitante>
-    </Partido>
-    <Partido>
-        <idPartido>92</idPartido>
-        <idEquipoLocal>11</idEquipoLocal>
-        <idEquipoVisitante>11</idEquipoVisitante>
-        <puntosLocal>51</puntosLocal>
-        <puntosVisitante>114</puntosVisitante>
-    </Partido>
-    <Partido>
-        <idPartido>93</idPartido>
-        <idEquipoLocal>10</idEquipoLocal>
-        <idEquipoVisitante>11</idEquipoVisitante>
-        <puntosLocal>69</puntosLocal>
-        <puntosVisitante>150</puntosVisitante>
-    </Partido>
-    <Partido>
-        <idPartido>94</idPartido>
-        <idEquipoLocal>11</idEquipoLocal>
-        <idEquipoVisitante>7</idEquipoVisitante>
-        <puntosLocal>156</puntosLocal>
-        <puntosVisitante>165</puntosVisitante>
-    </Partido>
-    <Partido>
-        <idPartido>95</idPartido>
-        <idEquipoLocal>15</idEquipoLocal>
-        <idEquipoVisitante>14</idEquipoVisitante>
-        <puntosLocal>156</puntosLocal>
-        <puntosVisitante>165</puntosVisitante>
-    </Partido>
-    <Partido>
-        <idPartido>96</idPartido>
-        <idEquipoLocal>15</idEquipoLocal>
-        <idEquipoVisitante>14</idEquipoVisitante>
-        <puntosLocal>199</puntosLocal>
-        <puntosVisitante>168</puntosVisitante>
     </Partido>
 </Partidos>

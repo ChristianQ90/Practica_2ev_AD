@@ -902,7 +902,7 @@
     </Jugador>
     <Jugador>
         <idJugador>101</idJugador>
-        <idEquipo>11</idEquipo>
+        <idEquipo>null</idEquipo>
         <nombre>Franco</nombre>
         <apellidos>Benítez</apellidos>
         <alturaCM>198</alturaCM>
@@ -911,7 +911,7 @@
     </Jugador>
     <Jugador>
         <idJugador>102</idJugador>
-        <idEquipo>15</idEquipo>
+        <idEquipo>null</idEquipo>
         <nombre>Juan</nombre>
         <apellidos>Blanco</apellidos>
         <alturaCM>190</alturaCM>
@@ -920,7 +920,7 @@
     </Jugador>
     <Jugador>
         <idJugador>103</idJugador>
-        <idEquipo>14</idEquipo>
+        <idEquipo>null</idEquipo>
         <nombre>Pedro</nombre>
         <apellidos>Díaz</apellidos>
         <alturaCM>185</alturaCM>
@@ -965,7 +965,7 @@
     </Jugador>
     <Jugador>
         <idJugador>108</idJugador>
-        <idEquipo>12</idEquipo>
+        <idEquipo>null</idEquipo>
         <nombre>Mauro</nombre>
         <apellidos>Lázaro</apellidos>
         <alturaCM>186</alturaCM>
@@ -974,7 +974,7 @@
     </Jugador>
     <Jugador>
         <idJugador>109</idJugador>
-        <idEquipo>12</idEquipo>
+        <idEquipo>null</idEquipo>
         <nombre>David</nombre>
         <apellidos>Lozano</apellidos>
         <alturaCM>185</alturaCM>
@@ -989,41 +989,5 @@
         <alturaCM>180</alturaCM>
         <edad>22</edad>
         <nacionalidad>Española</nacionalidad>
-    </Jugador>
-    <Jugador>
-        <idJugador>111</idJugador>
-        <idEquipo>15</idEquipo>
-        <nombre>Juan</nombre>
-        <apellidos>Pedroza</apellidos>
-        <alturaCM>199</alturaCM>
-        <edad>26</edad>
-        <nacionalidad>Española</nacionalidad>
-    </Jugador>
-    <Jugador>
-        <idJugador>113</idJugador>
-        <idEquipo>null</idEquipo>
-        <nombre>Ramón</nombre>
-        <apellidos>Cajal</apellidos>
-        <alturaCM>198</alturaCM>
-        <edad>36</edad>
-        <nacionalidad>Francesa</nacionalidad>
-    </Jugador>
-    <Jugador>
-        <idJugador>114</idJugador>
-        <idEquipo>11</idEquipo>
-        <nombre>Pablo</nombre>
-        <apellidos>Picota</apellidos>
-        <alturaCM>199</alturaCM>
-        <edad>23</edad>
-        <nacionalidad>Francesa</nacionalidad>
-    </Jugador>
-    <Jugador>
-        <idJugador>165</idJugador>
-        <idEquipo>null</idEquipo>
-        <nombre>asd</nombre>
-        <apellidos>asd</apellidos>
-        <alturaCM>95</alturaCM>
-        <edad>65</edad>
-        <nacionalidad>Francesa</nacionalidad>
     </Jugador>
 </Jugadores>

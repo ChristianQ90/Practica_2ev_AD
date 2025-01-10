@@ -42,35 +42,22 @@ public class DatosClasificacionLiga {
 	}
 	@Override
 	public String toString() {
-		String idEquipoSt = String.valueOf(equipo.getIdEquipo()),puntosFavorSt = String.valueOf(puntosFavor);
-		String puntosSt = String.valueOf(puntos), puntosContraSt = String.valueOf(puntosContra);
-		String resultado= "     " + equipo.getIdEquipo() + "       |      " + puntos + "      |   "
-				+ partidosGanados + "    |   " + partidosPerdidos + "  |   " + puntosFavor
-				+ "   |   " + puntosContra + "   |    " + diferenciaTotalPuntos
-				+ "    |   " + puntosFavorComoLocal + "   |   " + puntosContraComoLocal
-				+ "   |   " + diferenciaTotalPuntosComoLocal + "   |    "
-				+ puntosFavorComoVisitante + "   |   " + puntosContraComoVisitante
-				+ "   |   " + diferenciaTotalPuntosComoVisitante + " ";
-		if(idEquipoSt.length()==1 && puntosSt.length()==1) {
-			resultado= "     " + equipo.getIdEquipo() + "       |       " + puntos + "      |    "
-					+ partidosGanados + "    |  " + partidosPerdidos + "  |   " + puntosFavor
-					+ "   |   " + puntosContra + "   |   " + diferenciaTotalPuntos
-					+ "    |    " + puntosFavorComoLocal + "   |   " + puntosContraComoLocal
-					+ "   |   " + diferenciaTotalPuntosComoLocal + "   |    "
-					+ puntosFavorComoVisitante + "   |   " + puntosContraComoVisitante
-					+ "   |   " + diferenciaTotalPuntosComoVisitante + " ";
-		}
-		if(puntosFavorSt.length()==1 && puntosContraSt.length()==1) {
-			resultado= "     " + equipo.getIdEquipo() + "      |       " + puntos + "      |    "
-					+ partidosGanados + "    |   " + partidosPerdidos + "  |      " + puntosFavor
-					+ "   |      " + puntosContra + "   |     " + diferenciaTotalPuntos
-					+ "    |      " + puntosFavorComoLocal + "   |     " + puntosContraComoLocal
-					+ "   |     " + diferenciaTotalPuntosComoLocal + "   |      "
-					+ puntosFavorComoVisitante + "   |     " + puntosContraComoVisitante
-					+ "   |     " + diferenciaTotalPuntosComoVisitante + " ";
-		}
-		
-		return resultado;
+
+	    String formato =" %-32s |     %-6s |   %-5s |  %-3s |   %-6s |   %-6s |   %-6s |   %-5s |    %-4s |   %-5s |   %-5s |    %-4s |    %-3s";
+	        
+	        return String.format(formato,equipo.getNombre()+" (ID: "+equipo.getIdEquipo()+")",
+	            puntos,
+	            partidosGanados,
+	            partidosPerdidos,
+	            puntosFavor,
+	            puntosContra,
+	            diferenciaTotalPuntos,
+	            puntosFavorComoLocal,
+	            puntosContraComoLocal,
+	            diferenciaTotalPuntosComoLocal,
+	            puntosFavorComoVisitante,
+	            puntosContraComoVisitante,
+	            diferenciaTotalPuntosComoVisitante);
 	}
 	public Equipo getEquipo() {
 		return equipo;

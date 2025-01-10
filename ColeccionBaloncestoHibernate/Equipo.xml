@@ -72,37 +72,23 @@
     </Equipo>
     <Equipo>
         <idEquipo>11</idEquipo>
-        <nombre>Las llamas azules</nombre>
-        <localidad>Valladolid</localidad>
+        <nombre>Los Caimanes de Sevilla</nombre>
+        <localidad>Sevilla</localidad>
         <pais>España</pais>
-        <nombreCorto>llamas</nombreCorto>
+        <nombreCorto>Caimanes</nombreCorto>
     </Equipo>
     <Equipo>
-        <idEquipo>12</idEquipo>
-        <nombre>Los Malageños</nombre>
-        <localidad>Málaga</localidad>
+        <idEquipo>23</idEquipo>
+        <nombre>lkjsdflkdsf</nombre>
+        <localidad>daskfdpkafj</localidad>
+        <pais>ñfasñlk</pais>
+        <nombreCorto>ñklñl</nombreCorto>
+    </Equipo>
+    <Equipo>
+        <idEquipo>65</idEquipo>
+        <nombre>Las Ciguenias de Andorra</nombre>
+        <localidad>Andorra</localidad>
         <pais>España</pais>
-        <nombreCorto>Malageños</nombreCorto>
-    </Equipo>
-    <Equipo>
-        <idEquipo>13</idEquipo>
-        <nombre>Los Guacamallos de Perú</nombre>
-        <localidad>Localidad2</localidad>
-        <pais>Perú</pais>
-        <nombreCorto>Los Guaca</nombreCorto>
-    </Equipo>
-    <Equipo>
-        <idEquipo>14</idEquipo>
-        <nombre>Los llarrara</nombre>
-        <localidad>Acapulco</localidad>
-        <pais>México</pais>
-        <nombreCorto>Los llara</nombreCorto>
-    </Equipo>
-    <Equipo>
-        <idEquipo>15</idEquipo>
-        <nombre>sx</nombre>
-        <localidad>sacas</localidad>
-        <pais>cas</pais>
-        <nombreCorto>as</nombreCorto>
+        <nombreCorto>Ciguenias</nombreCorto>
     </Equipo>
 </Equipos>

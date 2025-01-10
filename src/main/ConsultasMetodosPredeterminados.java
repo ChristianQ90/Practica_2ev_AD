@@ -113,8 +113,10 @@ public class ConsultasMetodosPredeterminados {
 	        if (trans != null) trans.rollback();
 	        System.err.println("Error de Hibernate: " + he.getMessage());
 	    } catch (NullPointerException npe) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Intento de acceder a un objeto nulo. Verifique los datos.");
 	    } catch (IllegalArgumentException iae) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Argumento inválido al intentar buscar el registro: " + iae.getMessage());
 	    } catch (Exception e) {
 	        if (trans != null) trans.rollback();
@@ -246,8 +248,10 @@ public class ConsultasMetodosPredeterminados {
 	        if (trans != null) trans.rollback();
 	        System.err.println("Error de Hibernate: " + he.getMessage());
 	    } catch (NullPointerException npe) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Intento de acceder a un objeto nulo. Verifique los datos.");
 	    } catch (IllegalArgumentException iae) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Argumento inválido al intentar buscar el registro: " + iae.getMessage());
 	    } catch (Exception e) {
 	        if (trans != null) trans.rollback();
@@ -330,8 +334,10 @@ public class ConsultasMetodosPredeterminados {
 	        if (trans != null) trans.rollback();
 	        System.err.println("Error de Hibernate: " + he.getMessage());
 	    } catch (NullPointerException npe) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Intento de acceder a un objeto nulo. Verifique los datos.");
 	    } catch (IllegalArgumentException iae) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Argumento inválido al intentar buscar el registro: " + iae.getMessage());
 	    } catch (Exception e) {
 	        if (trans != null) trans.rollback();
@@ -1662,8 +1668,10 @@ public class ConsultasMetodosPredeterminados {
 	        if (trans != null) trans.rollback();
 	        System.err.println("Error de Hibernate: " + he.getMessage());
 	    } catch (NullPointerException npe) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Intento de acceder a un objeto nulo. Verifique los datos.");
 	    } catch (IllegalArgumentException iae) {
+	    	if (trans != null) trans.rollback();
 	        System.err.println("Error: Argumento inválido al intentar buscar el registro: " + iae.getMessage());
 	    } catch (Exception e) {
 	        if (trans != null) trans.rollback();

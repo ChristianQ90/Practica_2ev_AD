@@ -95,6 +95,7 @@ public class ConsultasHQL {
 					
 					System.out.println("  Jugadores del equipo local: "+partido.getEquipoByIdEquipoLocal().getNombre());
 					System.out.println("|  idJ  |  idP  |  valoración  | puntos |  asistencias  |  rebotes  |  tapones  | titular  |");
+					System.out.println("--------------------------------------------------------------------------------------------");
 					for (Jugador jugador : jugadoresLocales) {
 						datosClaveCompuesta = new DatosjugadorpartidoId(jugador.getIdJugador(),partido.getIdPartido());
 						//Datosjugadorpartido datosJugadorEnPartido  = new Datosjugadorpartido(datosClaveCompuesta,jugador,partido);
@@ -107,11 +108,16 @@ public class ConsultasHQL {
 						rebotes=datosJugadorEnPartido.getRebotes();
 						tapones = datosJugadorEnPartido.getTapones();
 						titular= datosJugadorEnPartido.getTitular();
-						System.out.println("|  "+idJ+"   |  "+idP+"   |     "+valoracion+"     |   "+puntos+"    |       "+asistencias+"       |     "+rebotes+"     |      "+tapones+"     |    "+titular+"   |");
+						//System.out.println("|  "+idJ+"   |  "+idP+"   |     "+valoracion+"     |   "+puntos+"    |       "+asistencias+"       |     "+rebotes+"     |      "+tapones+"     |    "+titular+"   |");
+					    System.out.println(String.format(
+					            "|  %-4s |  %-4s |     %-8s |   %-4s |      %-8s |     %-5s |     %-5s |  %-6s  |",
+					            idJ, idP, valoracion, puntos, asistencias, rebotes, tapones, titular
+					        ));
 					}
 				
 					System.out.println("\n  Jugadores del equipo visitante: "+partido.getEquipoByIdEquipoVisitante().getNombre());
 					System.out.println("|  idJ  |  idP  |  valoración  | puntos |  asistencias  |  rebotes  |  tapones  | titular  |");
+					System.out.println("--------------------------------------------------------------------------------------------");
 					for (Jugador jugador : jugadoresVisitantes) {
 						datosClaveCompuesta = new DatosjugadorpartidoId(jugador.getIdJugador(),partido.getIdPartido());
 						//Datosjugadorpartido datosJugadorEnPartido  = new Datosjugadorpartido(datosClaveCompuesta,jugador,partido);
@@ -124,8 +130,13 @@ public class ConsultasHQL {
 						rebotes=datosJugadorEnPartido.getRebotes();
 						tapones = datosJugadorEnPartido.getTapones();
 						titular= datosJugadorEnPartido.getTitular();
-						System.out.println("|  "+idJ+"   |  "+idP+"   |     "+valoracion+"     |   "+puntos+"    |       "+asistencias+"       |     "+rebotes+"     |      "+tapones+"     |    "+titular+"   |");
+						//System.out.println("|  "+idJ+"   |  "+idP+"   |     "+valoracion+"     |   "+puntos+"    |       "+asistencias+"       |     "+rebotes+"     |      "+tapones+"     |    "+titular+"   |");
+					    System.out.println(String.format(
+					            "|  %-4s |  %-4s |     %-8s |   %-4s |      %-8s |     %-5s |     %-5s |  %-6s  |",
+					            idJ, idP, valoracion, puntos, asistencias, rebotes, tapones, titular
+					        ));
 					}
+					System.out.println("");
 				}
 				
 			}else {
@@ -425,7 +436,6 @@ public class ConsultasHQL {
 	 * @see Datosjugadorpartido
 	 * @since 2024
 	 */
-
 	public void mostrarEstadisticasDeTitularYSuplente(int id) {
 		
 		Session s = null ; 
@@ -878,8 +888,8 @@ public class ConsultasHQL {
 
 				}
 				listaDatosCLiga.sort(new ComparadorDatosClasificacionLigaPorPuntos().thenComparing(new ComparadorDatosClasificacionLigaPorDifTotalPuntos()));
-				System.out.println("\n  Equipo(ID) |     Puntos   |   PG    |  PP  |    pF    |    pC    |    dPT   |   pFL   |   pCL   |   dPTL  |   pFV   |   pCV   |   dPTV  ");
-				System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
+				System.out.println("\n\tEquipo(ID)\t\t  |   Puntos   |   PG    |  PP  |    pF    |    pC    |    dPT   |   pFL   |   pCL   |   dPTL  |   pFV   |   pCV   |   dPTV  ");
+				System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------");
 				for(DatosClasificacionLiga datos : listaDatosCLiga) {
 					System.out.println(datos.toString());
 				}

@@ -652,14 +652,14 @@ public class ConsultasXML {
 			i= result.getIterator();
 			
 			if(!i.hasMoreResources()) {
-				System.out.println("La consulta no devuelve nada.");
+				System.out.println("La consulta no devuelve nada.\n");
 			}
 			while (i.hasMoreResources()) {
 				contadorElementos++;
 				Resource r = i.nextResource();
 				System.out.println((String)r.getContent());
 			}
-			System.out.println("Se han encontrado "+contadorElementos+" elementos.");
+			System.out.println("Se han encontrado "+contadorElementos+" elementos.\n");
 			col.close();
 			
 	    } catch (InstantiationException e) {
@@ -717,14 +717,14 @@ public class ConsultasXML {
 			i= result.getIterator();
 			
 			if(!i.hasMoreResources()) {
-				System.out.println("La consulta no devuelve nada.");
+				System.out.println("La consulta no devuelve nada.\n");
 			}
 			while (i.hasMoreResources()) {
 				contadorElementos++;
 				Resource r = i.nextResource();
 				System.out.println((String)r.getContent());
 			}
-			System.out.println("Se han encontrado "+contadorElementos+" elementos.");
+			System.out.println("Se han encontrado "+contadorElementos+" elementos.\n");
 			col.close();
 			
 	    } catch (InstantiationException e) {
@@ -804,7 +804,7 @@ public class ConsultasXML {
 				Resource r = i.nextResource();
 				System.out.println((String)r.getContent());
 			}
-			System.out.println("Se han encontrado "+contadorElementos+" elementos.");
+			System.out.println("Se han encontrado "+contadorElementos+" elementos.\n");
 			col.close();
 			
 	    } catch (InstantiationException e) {
@@ -876,7 +876,7 @@ public class ConsultasXML {
 			i= result.getIterator();
 			
 			if(!i.hasMoreResources()) {
-				System.out.println("La consulta no devuelve nada.");
+				System.out.println("La consulta no devuelve nada.\n");
 			}
 			while (i.hasMoreResources()) {
 				Resource r = i.nextResource();
@@ -976,14 +976,14 @@ public class ConsultasXML {
 			i= result.getIterator();
 			
 			if(!i.hasMoreResources()) {
-				System.out.println("La consulta no devuelve nada.");
+				System.out.println("La consulta no devuelve nada.\n");
 			}
 			while (i.hasMoreResources()) {
 				contadorElementos++;
 				Resource r = i.nextResource();
 				System.out.println((String)r.getContent());
 			}
-			System.out.println("Se han encontrado "+contadorElementos+" elementos.");
+			System.out.println("Se han encontrado "+contadorElementos+" elementos.\n");
 			col.close();
 			
 	    } catch (InstantiationException e) {
@@ -1063,7 +1063,7 @@ public class ConsultasXML {
 			i= result.getIterator();
 			
 			if(!i.hasMoreResources()) {
-				System.out.println("La consulta no devuelve nada.");
+				System.out.println("La consulta no devuelve nada.\n");
 			}
 			 
 			while (i.hasMoreResources()) {
@@ -1073,7 +1073,7 @@ public class ConsultasXML {
 				System.out.println(resultado);
 				
 			}
-			System.out.println("Se han encontrado "+contadorElementos+" elementos.");
+			System.out.println("Se han encontrado "+contadorElementos+" elementos.\n");
 			col.close();
 			
 	    } catch (InstantiationException e) {
